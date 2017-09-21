@@ -1,3 +1,7 @@
+<?php
+	echo '<pre>',var_dump($_SERVER),'</pre>';die();	
+?>
+
 <!doctype html>
 <html lang="en">
 <head>
