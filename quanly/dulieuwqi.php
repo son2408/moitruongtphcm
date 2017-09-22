@@ -32,7 +32,7 @@
 									<td><?php echo $row['thoigian'];?></td>
 									
 										<td>
-										<a class="btn btn-warning" style="color:white; margin-left: 50px" name="xoa" href="http://localhost/khoaluan/quanly/dulieuwqi-main.php?username=admin&tentaikhoan=<?php echo $row[1] ?>&tenfile=<?php echo $row[2] ?>"> Xóa</a>
+										<a class="btn btn-warning" style="color:white; margin-left: 50px" name="xoa" href="/quanly/dulieuwqi-main.php?username=admin&tentaikhoan=<?php echo $row[1] ?>&tenfile=<?php echo $row[2] ?>"> Xóa</a>
 										
 										</td>	
 	

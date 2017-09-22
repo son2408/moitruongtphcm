@@ -4,7 +4,7 @@
 	<title></title>
 </head>
 <body>
-<form method = "POST" enctype="multipart/form-data" action="http://localhost/khoaluan/quanly/dulieubando-them-thongbao.php?username=admin">
+<form method = "POST" enctype="multipart/form-data" action="/quanly/dulieubando-them-thongbao.php?username=admin">
 	<input type="file" name="filebando">
 	<input type="submit" name="them" value="test">
 </form>
