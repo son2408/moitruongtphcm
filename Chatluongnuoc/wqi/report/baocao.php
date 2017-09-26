@@ -68,9 +68,9 @@
 						</div> <!-- end body -->
 
 						<div class="modal-footer">
-							<a type="submit" class="btn btn-primary" name="xuatbaocao" href="/wqi/report/test1.php">Xuất báo cáo</a>
+							<a type="submit" class="btn btn-primary" name="xuatbaocao" href="http://localhost/khoaluan/wqi/report/test1.php">Xuất báo cáo</a>
 
-							<a class="btn btn-default" href="/wqi/dashboard.php"> Đóng</a>
+							<a class="btn btn-default" href="http://localhost/khoaluan/wqi/dashboard.php"> Đóng</a>
 						</div> <!-- end footer -->
 
 					</div> <!-- end content -->

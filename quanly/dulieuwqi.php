@@ -17,7 +17,7 @@
 					</thead>
 					<tbody>
 						<?php 
-						$conn = pg_connect("host=localhost port=5432 dbname=test user=postgres password=tranthaison");
+						require("../conn.php");
 						$select_data= "SELECT * from dulieufilewqi";
 						$result = pg_query($conn,"$select_data");
 						if ($result == true){
@@ -32,7 +32,7 @@
 									<td><?php echo $row['thoigian'];?></td>
 									
 										<td>
-										<a class="btn btn-warning" style="color:white; margin-left: 50px" name="xoa" href="/quanly/dulieuwqi-main.php?username=admin&tentaikhoan=<?php echo $row[1] ?>&tenfile=<?php echo $row[2] ?>"> Xóa</a>
+										<a class="btn btn-warning" style="color:white; margin-left: 50px" name="xoa" href="dulieuwqi-main.php?username=admin&tentaikhoan=<?php echo $row[1] ?>&tenfile=<?php echo $row[2] ?>"> Xóa</a>
 										
 										</td>	
 	

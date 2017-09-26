@@ -4,7 +4,7 @@
 	$matkhau = '';
 	$email = '';
 	$id = '';
-	$conn = pg_connect("host=localhost port=5432 dbname=test user=postgres password=tranthaison");
+	require("../conn.php");
 	if(isset($_POST['sua'])){
 		$tennguoidung = $_POST['tennguoidung'];
 		$taikhoan = $_POST['taikhoan'];
@@ -19,6 +19,6 @@
 	$update = "UPDATE taikhoan set tentaikhoan = '$taikhoan', tennguoidung = '$tennguoidung', matkhau = '$matkhau', mail ='$email' where id = $id";
 	$result = pg_query($conn ,"$update");
 	if($result ==true){
-		echo "<h3>Sửa dữ liệu thành công, bấm vào <a href=\"/quanly/dashboard.php?username=admin&active=thongtinnv\"> đây </a> để quay lại</h3>";
+		echo "<h3>Sửa dữ liệu thành công, bấm vào <a href=\"dashboard.php?username=admin&active=thongtinnv\"> đây </a> để quay lại</h3>";
 	}
  ?>

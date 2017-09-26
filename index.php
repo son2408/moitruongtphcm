@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE-edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Project 20117</title>
+    <title>Project 2017</title>
     
 
 
@@ -119,7 +119,7 @@ figure:hover .tieude{
 						<div class="row">
 							<div class="col-sm-12">           
 								<div class="pull-right" style="height:70px; padding: 5px 0px">
-									<form class="form-inline" method="post" action="/index-main.php" >
+									<form class="form-inline" method="post" action="http://localhost/2017/index-main.php" >
 										<div class="form-group">
 											<label for="">Tài Khoản</label>
 											<input type="text" class="form-control" name="taikhoan" placeholder="Tên đăng nhập...">

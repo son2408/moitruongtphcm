@@ -26,13 +26,14 @@
 					</thead>
 					<tbody>
 						<?php 
-						$conn = pg_connect("host=localhost port=5432 dbname=test user=postgres password=tranthaison");
+						require("../conn.php");
 						$select_data= "SELECT * from taikhoan";
 						$result = pg_query($conn,"$select_data");
 						if ($result == true){
 							$stt = 0;
 							while($row = pg_fetch_array($result)){
 								$stt ++ ;
+								$id = $row['id'];;
 								$tennguoidung = str_replace(" ","-",$row['tennguoidung']);
 								$tentaikhoan = $row['tentaikhoan'];
 								$matkhau = $row['matkhau'];
@@ -44,10 +45,10 @@
 									<td><?php echo $row['matkhau'];?></td>
 									<td><?php echo $row['mail'];?></td>
 									<td>
-										<a class="btn btn-warning" style="color:white; margin-left: 20px" name="xoa" href="/quanly/thongtinnv-main.php?action=xoa&username=admin&tentaikhoan=<?php echo $row[1] ?>"> Xóa</a>
+										<a class="btn btn-warning" style="color:white; margin-left: 20px" name="xoa" href="thongtinnv-main.php?action=xoa&username=admin&tentaikhoan=<?php echo $row[1] ?>"> Xóa</a>
 									</td>
 									<td>
-										<a class="btn btn-primary" style="color:white;" name="sua" href="/quanly/thongtinnv-sua.php?username=admin&id=<?php echo $id;?>&tennguoidung=<?php echo $tennguoidung;?>&taikhoan=<?php echo $tentaikhoan;?>&matkhau=<?php echo $matkhau;?>&email=<?php echo $mail;?>"> Sửa</a>
+										<a class="btn btn-primary" style="color:white;" name="sua" href="thongtinnv-sua.php?id=<?php echo $id;?>&tennguoidung=<?php echo $tennguoidung;?>&taikhoan=<?php echo $tentaikhoan;?>&matkhau=<?php echo $matkhau;?>&email=<?php echo $mail;?>"> Sửa</a>
 									</td>		
 								</tr>
 								<?php
@@ -61,7 +62,7 @@
 			</table>
 			<div class="row">
 				<div class="col-md-6 col-md-offset-5">
-					<a class="btn btn-success" href="/quanly/thongtinnv-them.php?username=admin" style="color:white">Tạo tài khoản mới</a>
+					<a class="btn btn-success" href="thongtinnv-them.php?username=admin" style="color:white">Tạo tài khoản mới</a>
 				</div>
 			</div>
 		</div>
