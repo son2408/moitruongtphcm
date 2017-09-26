@@ -16,7 +16,7 @@
 			$tentram = $row['tentram'];
 			$tentram1  = str_replace(" ","-",$row['tentram']);
 			$thoigian = $row['thoigian'];
-			$link = "chatluongnuoc/wqi/map-bieudo-ngay.php?filename=$filename&tentram=$tentram1&thoigian=$thoigian";
+			$link = "Chatluongnuoc/wqi/map-bieudo-ngay.php?filename=$filename&tentram=$tentram1&thoigian=$thoigian";
 			$mau = ''; 
 			if($wqi >=0 && $wqi <= 25){
 				$mucdo = "Nước ô nhiễm nặng, cần các biện pháp xử lý trong tương lai";

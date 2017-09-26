@@ -1185,7 +1185,7 @@ else
   };
 
 
-xmlhttp.open("GET","chatluongkhongkhi/Query_khongkhi.php?long="+long+"&lat="+lat+"<?php echo '&ts='.$ts.'&ngay='.$ngay?>",true);
+xmlhttp.open("GET","Chatluongkhongkhi/Query_khongkhi.php?long="+long+"&lat="+lat+"<?php echo '&ts='.$ts.'&ngay='.$ngay?>",true);
 xmlhttp.send();
 
 
