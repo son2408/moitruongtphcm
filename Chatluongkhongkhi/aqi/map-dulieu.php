@@ -20,7 +20,7 @@
                         $thongso_max = $row['thongso_ngay_max'];
                         $tentb = '';
                         $thoigian =$row['thoigian'];
-                        $link = "http://localhost/2017/chatluongkhongkhi/aqi/map-bieudo.php?filename=$filename_ngay&tentram=$tentram&thoigian=$thoigian";
+                        $link = "chatluongkhongkhi/aqi/map-bieudo.php?filename=$filename_ngay&tentram=$tentram&thoigian=$thoigian";
                         $mau='';
                         if($aqingay>=0 && $aqingay <=50){
                             $mau = 'icon-tot';

@@ -173,7 +173,7 @@
                           <?php echo "admin" ; ?> </span></h4>
                       </li>
                         <li>
-                            <a href="http://localhost/2017/index.php" style="font-weight: 600">
+                            <a href="index.php" style="font-weight: 600">
                                 Thoát
                             </a>
                         </li>

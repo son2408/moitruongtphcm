@@ -34,7 +34,7 @@
 					</div>
 
 				<div class="modal-footer">
-					<a class="btn btn-default" href="http://localhost/2017/index.php"> OK<a>
+					<a class="btn btn-default" href="index.php"> OK<a>
 				</div> <!-- end footer -->
 
 			</div> <!-- end content -->
