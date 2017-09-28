@@ -4,7 +4,6 @@
  {
   $ts = $_GET["ts"];
         $ngay = $_GET["ngay"];
-        $username = $_GET["username"];
  }
    else{
     $ts = "O3";
@@ -15,7 +14,7 @@
  ?>
 
 
-<div id= " container-map-chart" style="margin-top: 30px">
+<div id= " container-map-chart" style="margin-top: 20px">
 
 <div class="col-xs-6" style="height:600PX; " >
 
@@ -173,8 +172,7 @@
                                 <div>110</div>
                                 <div>100</div>
                                 <div>90</div>
-                                <div>80</div>
-                     
+                                <div>80</div>                     
                                 <div>70</div>
                                 <div>60</div>
                                 <div>50</div>
@@ -261,80 +259,93 @@
 </div>
 </div>
 <!-- Button trigger modal -->
-<div  class="col-xs-6" style =" float: right; width: 50%; font-family: itim;" >
+<div class="containermenu col-xs-6" >
+<section class="row">
+        <div class="tabs" >
+          <nav>
+            <ul>
+              <li><a href="#section-flip-1" id="showchart">
+                <span> 
+                  <span class="glyphicon glyphicon-home" style="font-size:1em ; margin: -5px 5px 0px 0px"></span>
+                  Thông tin vị trí
+                </span>
+              </a></li>
+              <li><a href="#section-flip-2 ">
+                <span>
+                  <span class="glyphicon glyphicon-search" style="font-size:1em ; margin: -5px 5px 0px 0px"></span>
+                  Tìm kiếm
+                </span>
+              </a></li>
+              <li><a href="#section-flip-3">
+                <span>
+                  <span class="glyphicon glyphicon-save" style="font-size:1em ; margin: -5px 5px 0px 0px"></span>
+                  Lưu trữ
+                </span>
+              </a></li>
+              <li><a href="#section-flip-4">
+                <span>
+                  <span class="glyphicon glyphicon-leaf" style="font-size:1em ; margin: -5px 5px 0px 0px"></span>
+                  Dữ liệu
+                </span>
+              </a></li>
+              
+            </ul>
 
+          </nav>
+          <div class="content-wrap">
+          <section id="section-flip-1" >
+              
+                <button   id="Button_highchart" class="btn btn-primary btn-lg" style="display:none">
 
-<div class="col-xs-12" >
-<ul class="nav nav-tabs bg-danger" role="tablist" id="myTab">
-  <li class="active bg-danger" id="thongtin"  ><a id="showchart" href="#tab-info" role="tab" data-toggle="tab" onclick="show()">Thông tin vị trí</a></li>
-  <li class="bg-danger"><a href="#tab-search" role="tab" data-toggle="tab" onclick="hide()">Tìm kiếm</a></li>
-  <li class="bg-danger"><a href="#tab-save" role="tab" data-toggle="tab" onclick="hide()">Lưu trữ</a></li>
-  <li class="bg-danger"><a href="#tab-option" role="tab" data-toggle="tab" onclick="hide()">Lựa chọn dữ liệu</a></li>
- 
-</ul>
+                </button>
 
-<!-- Tab panes -->
-<div class="tab-content col-xs-12" >
-    <div class="tab-pane fade in  active" id="tab-info">
-        <button   id="Button_highchart" class="btn btn-primary btn-lg" style="display:none">
-    
-  
-        </button>
+                <div id= "before" style="" >
+                  <div> <strong> Các hướng dẫn cơ bản khi truy xuất biểu đồ!</strong></div>
+                  <p> 
+                      - Bạn có thể tìm kiếm dữ liệu và vẽ biễu đồ theo 2 cách:
+                      <br>
+                      <div style="padding-left: 20px; margin-bottom: 10px">
+            + Cách 1: Click chuột vào bất kì một điễm trên bản đồ (phía bên trái).
 
-      <div id= "before"  >
-            <div style="height: 30px; margin:20px 20px 10px 30px; color: #0618a1; font-size: 16px; font-weight: bold"> Click chuột vào vị trí bất kì trên Map để tìm kiếm dữ liệu </div>  
-            <div class="panel panel-danger">
-                  <div class="panel-heading"> <strong> Các hướng dẫn cơ bản khi truy xuất biểu đồ!</strong></div>
-                  <div class="panel-body">
-                    <p>	
-                    	- Bạn có thể tìm kiếm dữ liệu và vẽ biễu đồ theo 2 cách:
-                    	<br>
-                    	<div style="padding-left: 20px; margin-bottom: 10px">
-						+ Cách 1: Click chuột vào bất kì một điễm trên bản đồ (phía bên trái).
-
-						<br>
-						+ Cách 2: Tìm kiếm thông qua Tab Tìm kiếm, tại đây bạn nhập thông tin vị trí bao gồm kinh độ và vĩ độ (ví dụ: 106.22 , 10.66).
-						</div>
-						<div style="margin-bottom: 5px">
-
-						- Bạn có thể tương tác với Map như: Phóng to, Thu nhỏ, Di chuyễn, Bật/tắt các layer... Cũng như có thể sữ dụng chúng trong việc: tìm kiếm địa điểm, tìm kiếm đường đi.
-						</div>
-						<div style="margin-bottom:5px">
-						- Bạn có thể lưu các điểm tìm kiếm lại để tiện việc sữ dụng, các điểm lưu được quản lí thông qua Tab Lưu trữ.
-						</div>
-						<div style="margin-bottom: 5px">
-						- Bạn có thể lựa chọn loại dữ liệu cần tìm kiếm trong Tab "Lựa chọn dữ liệu".
-						</div>
-						<div style="margin-bottom: 5px">
-						- Bạn có thể Download biễu đồ sau khi truy xuất bằng cách nhấn biểu tượng <span class="glyphicon glyphicon-camera">  </span> trên góc trên biễu đồ.
-						</div>
-
-                    </p>
-                  </div>
+            <br>
+            + Cách 2: Tìm kiếm thông qua Tab Tìm kiếm, tại đây bạn nhập thông tin vị trí bao gồm kinh độ và vĩ độ (ví dụ: 106.22 , 10.66).
             </div>
+            <div style="margin-bottom: 5px">
 
-      </div>
+            - Bạn có thể tương tác với Map như: Phóng to, Thu nhỏ, Di chuyễn, Bật/tắt các layer... Cũng như có thể sữ dụng chúng trong việc: tìm kiếm địa điểm, tìm kiếm đường đi.
+            </div>
+            <div style="margin-bottom:5px">
+            - Bạn có thể lưu các điểm tìm kiếm lại để tiện việc sữ dụng, các điểm lưu được quản lí thông qua Tab Lưu trữ.
+            </div>
+            <div style="margin-bottom: 5px">
+            - Bạn có thể lựa chọn loại dữ liệu cần tìm kiếm trong Tab "Lựa chọn dữ liệu".
+            </div>
+            <div style="margin-bottom: 5px">
+            - Bạn có thể Download biễu đồ sau khi truy xuất bằng cách nhấn biểu tượng <span class="glyphicon glyphicon-camera">  </span> trên góc trên biễu đồ.
+            </div>
+                    </p>
+                </div>
 
-      <div id="after" style="display: none">
+                <div id="after" style=" display:none;height: 450px ">
+                  <div >
+                  <div class="row" >
+                    <div class="col-xs-10">
+                      <form class="form-style-4" action="" method="post" >            
 
-            <div class="col-xs-12" >
-                  <div class="col-xs-10">
-                        <form class="form-style-4" action="" method="post" >            
-                            
-                            <label for="field1">
-                            <span>Tên vị trí</span><input type="text" name="field1"  id="point-name"  />
-                            </label>
-                             
-                            <label for="field2">
-                            <span>Kinh độ</span><input type="text" name="field2"  id = "long"  />
-                            </label>
-                            <label for="field3">
-                            <span>Vĩ độ</span><input type="text" name="field3"  id = "lat"  />
-                            </label>         
-                          
-                        </form>
-                  </div>
-                  <div class="col-xs-2" style="margin-top: 10px; padding-top: 20px">
+                        <label for="field1">
+                          <span>Tên vị trí</span><input type="text" name="field1"  id="point-name"  />
+                        </label>
+
+                        <label for="field2">
+                          <span>Kinh độ</span><input type="text" name="field2"  id = "long"  />
+                        </label>
+                        <label for="field3">
+                          <span>Vĩ độ</span><input type="text" name="field3"  id = "lat"  />
+                        </label>         
+
+                      </form>
+                    </div>
+                    <div class="col-xs-2" style="margin-top: 10px; padding-top: 20px">
                      <button class="button-tab" id="save-point" data-toggle = "tooltip" title="Lưu" style="margin-top: 20px" >
                        <span class="glyphicon glyphicon-save"> </span>
                      </button>
@@ -350,13 +361,15 @@
                      <button class="button-tab" id="cancle" data-toggle = "tooltip" title="Hủy bỏ" style="display: none">
                        <span class="glyphicon glyphicon-repeat"></span>
                      </button>
-                  </div>
-            </div>
+                   </div>
+                 </div>
 
+                </div>
             <button id = "modal-alert" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal" style="display: none">
-                
-        </button>
-      </div>
+
+            </button>
+            <div id="container_highchart" style="width:100%; height: 300px">
+          </div>
           <!-- Modal -->
           <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" >
             <div class="modal-dialog">
@@ -378,152 +391,168 @@
               </div>
             </div>
           </div>
-        
-    </div>
-  <div class="tab-pane fade" id="tab-search" >
-      <div      >
-      
-            <div class="container" style="width: 100%; margin: 20px 0px">
-                  <div class="col-xs-6">
-                        <div> Kinh độ</div>
-                        <div class="input-group">
-                            <span class="input-group-addon"> Kinh độ </span>
-                            <input type="text" class="form-control" 
-                                    id = "long2" name="long_point2"  >
-                        </div>
-                        
-                      
-                  </div>
-                  <div class="col-xs-6">
-                        <div> Vĩ độ</div>
-                        <div class="input-group">
-                            <span class="input-group-addon"> Vĩ độ</span>
-                            <input type="text" class="form-control" 
-                                    id = "lat2" name="lat_point2"  >
-                        </div>
-                        
-                  </div>
-            </div>
+          
 
-            <div style="margin: 20px 0px">
-
-                <div  class="alert alert-danger alert-dismissable" id="chuanhap"
-                      style="margin: 0px 20px 1px 20px; height:35px;line-height:35px;  padding:0px 35px; display: none;">
-                          <a href="#" class="close" style="margin-top: 8px">&times;</a>
-                          <strong>Chưa nhập thông tin !</strong> Bạn phải điền đầy đủ thông tin.
-                </div>
-                <div class="alert alert-danger alert-dismissable" id="nhapsai"
-                style="margin: 0px 0px;height:35px;  line-height:35px;  padding:0px 35px;display: none;">
-                          <a href="#" class="close" style="margin-top: 8px">&times;</a>
-                          <strong>Thông tin chưa đúng !</strong> Phải là số thập phân và phải có 2 số hạng ở hàng thập phân
-                </div>
-            </div>
-            <div style="width:100%; margin: auto; text-align: center;">
-            <button   id="Button_highchart_search" >
-            Tìm kiếm         
-        
-            </button>
-            </div>
-      </div>
      
+  </div>
 
-      
-       <button id = "modal-alert2" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal2" style="display: none">
-            
-      </button>
+        
+      </section>
+      <section id="section-flip-2" >
+        
+          <div class="container" style="width: 100%; position: relative; ">
+                  <div id="formWrapper row" style="height: 60px" >
 
-          <!-- Modal -->
-          <div class="modal fade" id="myModal2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-            <div class="modal-dialog">
-              <div class="modal-content">
-                <div class="modal-header">
-                  <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-                  <h4 class="modal-title" id="myModalLabel">Xin lỗi! </h4>
+                    <div id="search-form">
+
+                      <div class="form-item col-xs-5" >
+                        <p class="formLabel">Kinh độ</p>
+                        <input type="text" name="long_point2" id="long2" class="form-style" autocomplete="off"/>
+                      </div>
+                      <div class="form-item col-xs-5">
+                        <p class="formLabel">Vĩ độ</p>
+                        <input type="text" name="lat_point2" id="lat2" class="form-style" />
+                         
+                      </div>
+                      <div class="form-item col-xs-2">
+                        <button   id="Button_highchart_search" >
+                          <span class="glyphicon glyphicon-search"></span>        
+
+                        </button>
+                        
+                      </div>
+                    </div>
+
+                 
+              </div>
+               <div class="row" style="padding-top: 10px;">
+
+                      <div  class="alert alert-danger alert-dismissable col-xs-12" id="chuanhap"
+                      style=" height:35px;line-height:35px;  padding:0px 35px; border-radius: 0px; display: none">
+                      <a href="#" class="close" style="margin-top: 8px">&times;</a>
+                      <strong>Chưa nhập thông tin !</strong> Bạn phải điền đầy đủ thông tin.
+                    </div>
+
+                    <div class="alert alert-danger alert-dismissable" id="nhapsai"
+                    style="height:35px;  line-height:35px; padding:0px 35px; border-radius: 0px;display: none ">
+                    <a href="#" class="close" style="margin-top: 8px">&times;</a>
+                    <strong>Chưa đúng !</strong> Phải là số thập phân và có 2 số hạng ở hàng thập phân
+                  </div>
                 </div>
-                <div class="modal-body">
-                  Dữ liệu không được tìm thấy. Vị trí bạn chọn nằm ngoài vùng nghiên cứu. Vui lòng thử một vị trí khác
-                </div>
-                <div class="modal-footer">
-                  <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+
+
+
                   
-                </div>
-              </div>
-            </div>
           </div>
+
       
-       <div id="container_highchart_search" style="width: 550px; height: 380px; margin: 0 auto"></div>
-  </div>
-  <div class="tab-pane fade" id="tab-save">
-  		<div id="chualuu" style="margin-top: 20px; font-weight: bold; text-align: center;"> Vẫn chưa có thông tin nào được lưu</div>
-       <div class="list-group" id="list-group-point" style="margin-top: 20px">
-         
+      
+      
+    <button id = "modal-alert2" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal2" style="display: none">
 
-       </div> 
-        <div class="modal fade" id="ModalEdit" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" >
-              <div class="modal-dialog">
-                <div class="modal-content">
-                  <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-                    <h4 class="modal-title" id="myModalLabel">Thay đổi thông tin</h4>
-                  </div>
-                  <div class="modal-body">
+    </button>
+
+    <!-- Modal -->
+    <div class="modal fade" id="myModal2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            <h4 class="modal-title" id="myModalLabel">Xin lỗi! </h4>
+          </div>
+          <div class="modal-body">
+            Dữ liệu không được tìm thấy. Vị trí bạn chọn nằm ngoài vùng nghiên cứu. Vui lòng thử một vị trí khác
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="container_highchart_search" style="width:100%; height: 300px">
+      
+    </div>
+  </section>
+  <section id="section-flip-3">
+    <div id="chualuu" style="margin-top: 20px; font-weight: bold; text-align: center;"> Vẫn chưa có thông tin nào được lưu</div>
+    <div class="list-group" id="list-group-point" style="margin-top: 20px">
 
 
-                      <form class="form-horizontal" role="form">
-                            <div class="form-group">
-                              <label for="name-edit" class="col-sm-2 control-label">Tên vị trí</label>
-                              <div class="col-sm-10">
-                                <input type="text" class="form-control" id="name-edit" placeholder="Email">
-                              </div>
-                            </div>
-                            <div class="form-group">
-                              <label for="long-edit" class="col-sm-2 control-label">Kinh độ</label>
-                              <div class="col-sm-10">
-                                <input type="text" class="form-control" id="long-edit" placeholder="Email">
-                              </div>
-                            </div>
-                            <div class="form-group">
-                              <label for="lat-edit" class="col-sm-2 control-label">Vĩ độ</label>
-                              <div class="col-sm-10">
-                                <input type="text" class="form-control" id="lat-edit" placeholder="Email">
-                              </div>
-                            </div>
-                      </form>
-                  </div>
-                  <div class="modal-footer">
-                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-primary" id="save-edit">Save changes</button>
-                  </div>
+    </div> 
+    <div class="modal fade" id="ModalEdit" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            <h4 class="modal-title" id="myModalLabel">Thay đổi thông tin</h4>
+          </div>
+          <div class="modal-body">
+
+
+            <form class="form-horizontal" role="form">
+              <div class="form-group">
+                <label for="name-edit" class="col-sm-2 control-label">Tên vị trí</label>
+                <div class="col-sm-10">
+                  <input type="text" class="form-control" id="name-edit" placeholder="Email">
                 </div>
               </div>
-            </div>
-
-  </div>
-  <div class="tab-pane fade" id="tab-option">
-
-      <div class="container" style="width: 100%; margin: 20px 0px; font-size: 16px">
-                  <div class="col-xs-6">
-                        <div> Thông số</div>
-                        <div class="input-group">
-                            <span class="input-group-addon glyphicon glyphicon-star-empty"> </span>
-                            <select class="form-control input-md" id= "lc_ts">
+              <div class="form-group">
+                <label for="long-edit" class="col-sm-2 control-label">Kinh độ</label>
+                <div class="col-sm-10">
+                  <input type="text" class="form-control" id="long-edit" placeholder="Email">
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="lat-edit" class="col-sm-2 control-label">Vĩ độ</label>
+                <div class="col-sm-10">
+                  <input type="text" class="form-control" id="lat-edit" placeholder="Email">
+                </div>
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary" id="save-edit">Save changes</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="section-flip-4" style="position: relative; z-index:3">
+    <div class="container" style="width: 100%; margin: 20px 0px; font-size: 16px">
+      <div class="col-xs-6" >
+        <div> Thông số</div>
+        
+        <div class="input-group" >
+          <span class="input-group-addon " style="border-radius: 0px; height:40px"> 
+               <span class="glyphicon glyphicon-leaf"></span>
+          </span>
+          
+          <select class="form-control input-md" id= "lc_ts" style="border-radius: 0px;height:40px; ">
+                                
                                 <option value="AQI">Chỉ số CLKK AQI</option>
                                 <option value="O3">Nồng độ O3</option>
                                 <option value="CO">Nồng độ CO</option>
                                 <option value="NO2">Nồng độ NO2</option>
                                 <option value="NO">Nồng độ NO</option>
                                 <option value="SO2">Nồng độ SO2</option>
-                            
-                            </select>
-                        </div>
-                        
-                      
-                  </div>
-                  <div class="col-xs-6">
-                        <div> Ngày</div>
-                        <div class="input-group">
-                            <span class="input-group-addon glyphicon glyphicon-star-empty"> </span>
-                            <select class="form-control input-md" id="lc_ngay">                             
+          </select>
+          </div>
+
+        
+
+        </div>
+
+      
+      <div class="col-xs-6" >
+        <div> Ngày</div>
+        <div class="input-group">
+          <span class="input-group-addon" style="border-radius: 0px; height:40px">
+                <span class="glyphicon glyphicon-flash"></span> 
+          </span>
+          <select class="form-control input-md" id="lc_ngay" style="border-radius: 0px;height:40px; ">                            
                                 <option value="01-03-2011">Ngày 01/03/2011</option>
                                 <option value="02-03-2011">Ngày 02/03/2011</option>
                                 <option value="03-03-2011">Ngày 03/03/2011</option>
@@ -531,49 +560,48 @@
                                 <option value="07-03-2011">Ngày 07/03/2011</option>
                                 <option value="08-03-2011">Ngày 08/03/2011</option>
                                 <option value="09-03-2011">Ngày 09/03/2011</option>
-                            </select>
-                            
-                        </div>
-                        
-                  </div>
+          </select>
 
+        </div>
 
       </div>
-      <div style="width:100%; margin-top: 30px; text-align: center;">
-                      <button   id="luachon" >
-                            Lựa Chọn        
-                  
-                      </button>
-      </div>
-
-  </div>
-  
-</div>
 
 
- <div id="container_highchart" style="width: 550px; height: 300px; margin: 0 auto">
-   
- </div>
- 
-<form id="point_test" method="POST" action="" >
-    <!-- <input type="text" id = "long" name="long_point" 
-           onchange="show(this.value)"
-        value ="<?php ; ?>">
+    </div>
+    <div style="width:100%; margin-top: 20px; text-align: center;">
+      <button   id="luachon" >
+        Lựa Chọn        
+
+      </button>
+    </div>
+  </section>
             
-    value ="<?php ; ?>"> -->
+          </div><!-- /content -->
+        </div><!-- /tabs -->
+</section>
+
+
+<form id="point_test" method="POST" action="" >
+    
     
     <input type="text" id ="myDiv" name="" style="display: none">
     
 </form>
-
-</div>
-
-</div>
 </div>
 
 
+<!-- so sanh  -->
+<script type="text/javascript">
 
 
+  $("#sosanh").click(function(){
+  var  gio_sosanh= $('#gio_sosanh').val();  
+  alert(gio_sosanh);
+ 
+
+});  
+
+</script>
 
 
 
@@ -584,8 +612,7 @@
 $("#luachon").click(function(){
   var  lcts= $('#lc_ts').val();
   var lcngay =$('#lc_ngay').val();
-  var name = "<?php echo $username ?>";
-  window.location.href = 'index-user.php?&page=clkhongkhi&ts='+lcts+'&ngay='+lcngay+ '&username='+name;
+  window.location.href = 'index.php?page=mapkhongkhi&ts='+lcts+'&ngay='+lcngay;
 
 });
 
@@ -839,6 +866,12 @@ $("#save-point").click(function(){
         button.setAttribute("id", "div"+name);
     var text = document.createElement("span");
         text.setAttribute("id",name);
+
+    var check = document.createElement("input");
+        check.setAttribute("id", "check"+name);
+        check.setAttribute("type", "checkbox");  
+        check.setAttribute("style", "margin-right:15px");
+
     var close = document.createElement("button");
         close.setAttribute("style", "float:right; margin-top: -5px" );
         close.setAttribute("data-toggle", "tooltip" );
@@ -870,11 +903,13 @@ $("#save-point").click(function(){
         spanedit.setAttribute("class", "glyphicon glyphicon-pencil");
         edit.appendChild(spanedit);    
     var node = document.createTextNode(name);
+        button.appendChild(check);
         text.appendChild(node);
         button.appendChild (text);
         button.appendChild (close);
         button.appendChild(edit);
         button.appendChild(view);
+        
         
         
 
@@ -1185,7 +1220,7 @@ else
   };
 
 
-xmlhttp.open("GET","chatluongkhongkhi/Query_khongkhi.php?long="+long+"&lat="+lat+"<?php echo '&ts='.$ts.'&ngay='.$ngay?>",true);
+xmlhttp.open("GET","/2017/Database/Query_highchart.php?long="+long+"&lat="+lat+"<?php echo '&ts='.$ts.'&ngay='.$ngay?>",true);
 xmlhttp.send();
 
 
@@ -1246,7 +1281,7 @@ if(!error){
                     var title = {
                           text: "Biểu đồ thể hiện giá trị" +" <?php 
                                   if ($ts!='AQI') {
-                                    echo 'nồng độ '.$ts.' của khu vưc TP.HCM ngày '.$ngay;
+                                    echo 'nồng độ '.$ts.' của khu vưc TP.HCM ngày '.$ngay;
                                   }
                                   else{
                                     echo $ts.'của khu vưc TP.HCM ngay'.$ngay;
@@ -1337,7 +1372,7 @@ if(!error){
   };
 
 
-xmlhttp.open("GET","Database/Query_highchart.php?long="+long2+"&lat="+lat2+"<?php echo '&ts='.$ts.'&ngay='.$ngay?>",true);
+xmlhttp.open("GET","/2017/Database/Query_highchart.php?long="+long2+"&lat="+lat2+"<?php echo '&ts='.$ts.'&ngay='.$ngay?>",true);
 xmlhttp.send();
 map.getSource('single-point').setData({
                 "type": "FeatureCollection",
@@ -1534,4 +1569,104 @@ $(document).ready(function(){
 
 
 
+</script>
+
+<!-- sript menu tab -->
+<script>
+      (function( window ) {
+  
+  
+
+  function extend( a, b ) {
+    for( var key in b ) { 
+      if( b.hasOwnProperty( key ) ) {
+        a[key] = b[key];
+      }
+    }
+    return a;
+  }
+
+  function CBPFWTabs( el, options ) {
+    this.el = el;
+    this.options = extend( {}, this.options );
+      extend( this.options, options );
+      this._init();
+  }
+
+  CBPFWTabs.prototype.options = {
+    start : 0
+  };
+
+  CBPFWTabs.prototype._init = function() {
+    // tabs elems
+    this.tabs = [].slice.call( this.el.querySelectorAll( 'nav > ul > li' ) );
+    // content items
+    this.items = [].slice.call( this.el.querySelectorAll( '.content-wrap > section' ) );
+    // current index
+    this.current = -1;
+    // show current content item
+    this._show();
+    // init events
+    this._initEvents();
+  };
+
+  CBPFWTabs.prototype._initEvents = function() {
+    var self = this;
+    this.tabs.forEach( function( tab, idx ) {
+      tab.addEventListener( 'click', function( ev ) {
+        ev.preventDefault();
+        self._show( idx );
+      } );
+    } );
+  };
+
+  CBPFWTabs.prototype._show = function( idx ) {
+    if( this.current >= 0 ) {
+      this.tabs[ this.current ].className = this.items[ this.current ].className = '';
+    }
+    // change current
+    this.current = idx != undefined ? idx : this.options.start >= 0 && this.options.start < this.items.length ? this.options.start : 0;
+    this.tabs[ this.current ].className = 'tab-current';
+    this.items[ this.current ].className = 'content-current';
+  };
+
+  // add to global namespace
+  window.CBPFWTabs = CBPFWTabs;
+
+})( window );
+
+
+
+  (function() {
+
+        [].slice.call( document.querySelectorAll( '.tabs' ) ).forEach( function( el ) {
+          new CBPFWTabs( el );
+        });
+
+      })();
+</script>
+
+
+<!-- script form search -->
+
+
+<script type="text/javascript">
+$(document).ready(function(){
+  var formInputs = $('input[type="text"]');
+  formInputs.focus(function() {
+       $(this).parent().children('p.formLabel').addClass('formTop');
+       $('div#formWrapper').addClass('darken-bg');
+       $('div.logo').addClass('logo-active');
+  });
+  formInputs.focusout(function() {
+    if ($.trim($(this).val()).length == 0){
+    $(this).parent().children('p.formLabel').removeClass('formTop');
+    }
+    $('div#formWrapper').removeClass('darken-bg');
+    $('div.logo').removeClass('logo-active');
+  });
+  $('p.formLabel').click(function(){
+     $(this).parent().children('.form-style').focus();
+  });
+});
 </script>

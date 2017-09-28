@@ -1,63 +1,37 @@
-<?php
-  $username ='';
-  if(isset($_GET['username'])){
-    $username= $_GET['username'];
-  } 
-?>
+
 
 <div id= " container-map-chart" style="margin-top: 30px">
 
-<div class="col-xs-6" style="height:600PX; " >
+<div class="col-xs-6" style="height:400PX; " >
 
 <div id="info"> Bạn chưa chọn dữ liệu...</div>
 
-<div id='map'></div>
+<div id='map' style="height: 300px"></div>
 </div>
 
 <!-- Button trigger modal -->
 <div  class="col-xs-6" style =" float: right; width: 50%; font-family: itim;" >
 
-
-<div class="col-xs-12" >
-<ul class="nav nav-tabs bg-danger" role="tablist" id="myTab">
-  <li class="bg-danger" id="thongtin"  ><a id="showchart" href="#tab-info" role="tab" data-toggle="tab" onclick="show()">Thông tin vị trí</a></li>
-  <li class="bg-danger"><a href="#tab-search" role="tab" data-toggle="tab" onclick="hide()">Tìm kiếm</a></li>
-  <li class="bg-danger"><a href="#tab-save" role="tab" data-toggle="tab" onclick="hide()">Lưu trữ</a></li>
-  <li class=" active  bg-danger"><a href="#tab-option" role="tab" data-toggle="tab" onclick="hide()">Lựa chọn dữ liệu</a></li>
- 
-</ul>
-
-<!-- Tab panes -->
-<div class="tab-content col-xs-12" >
-    <div class="tab-pane fade in " id="tab-info"  style="padding-top: 20px ">
-        Bạn chưa chọn dữ liệu...
-
-        
-        
-    </div>
-  <div class="tab-pane fade" id="tab-search" style="padding-top: 20px ">
-      Bạn chưa chọn dữ liệu...
-  </div>
-  <div class="tab-pane fade" id="tab-save"  style="padding-top: 20px ">
-  		Bạn chưa chọn dữ liệu...
-
-  </div>
-  <div class="tab-pane fade in active" id="tab-option">
-
-      <div class="container" style="width: 100%; margin: 20px 0px; font-size: 16px">
+  <div  id="tab-option">
+      <h3> Bạn vui lòng chọn dữ liệu</h3>
+      <div class="container" style="width: 100%; margin-top: 30px ;font-size: 16px">
+                
                   <div class="col-xs-6">
+
                         <div> Thông số</div>
                         <div class="input-group">
-                            <span class="input-group-addon glyphicon glyphicon-star-empty"> </span>
-                            <select class="form-control input-md" id= "lc_ts">
+                            <span class="input-group-addon"> 
+                              <span class=" glyphicon glyphicon-star-empty"></span> 
+                            </span>
+                            <select class="form-control input-md" id= "lc_ts" style="border-radius: 0px;height:40px; ">
+                                
                                 <option value="AQI">Chỉ số CLKK AQI</option>
                                 <option value="O3">Nồng độ O3</option>
                                 <option value="CO">Nồng độ CO</option>
                                 <option value="NO2">Nồng độ NO2</option>
                                 <option value="NO">Nồng độ NO</option>
                                 <option value="SO2">Nồng độ SO2</option>
-                            
-                            </select>
+                             </select>
                         </div>
                         
                       
@@ -65,8 +39,10 @@
                   <div class="col-xs-6">
                         <div> Ngày</div>
                         <div class="input-group">
-                            <span class="input-group-addon glyphicon glyphicon-star-empty"> </span>
-                            <select class="form-control input-md" id="lc_ngay">                             
+                            <span class="input-group-addon "> 
+                                  <span class="glyphicon glyphicon-star-empty"></span>
+                            </span>
+                            <select class="form-control input-md" id="lc_ngay" style="border-radius: 0px;height:40px; ">                            
                                 <option value="01-03-2011">Ngày 01/03/2011</option>
                                 <option value="02-03-2011">Ngày 02/03/2011</option>
                                 <option value="03-03-2011">Ngày 03/03/2011</option>
@@ -88,12 +64,9 @@
                   
                       </button>
       </div>
+      
 
   </div>
-  
-</div>
-
-
 </div>
 
 </div>
@@ -105,8 +78,7 @@
 $("#luachon").click(function(){
   var  lcts= $('#lc_ts').val();
   var lcngay =$('#lc_ngay').val();
-  var name = "<?php echo $username ?>";
-  window.location.href = "index-user.php?page=clkhongkhi&ts="+lcts+"&ngay="+lcngay+"&username="+name;
+  window.location.href = "index.php?page=mapkhongkhi&ts="+lcts+"&ngay="+lcngay;
 
 });
 
@@ -189,6 +161,31 @@ $(document).ready(function(){
 
 
 
+Highcharts.chart('highchart', {
 
+    title: {
+        text: 'Bạn chưa chọn dữ liệu...'
+    },
+
+    xAxis: {
+        tickInterval: 1
+    },
+
+    yAxis: {
+        type: 'logarithmic',
+        minorTickInterval: 0.1
+    },
+
+    tooltip: {
+        headerFormat: '<b>{series.name}</b><br />',
+        pointFormat: 'x = {point.x}, y = {point.y}'
+    },
+
+    series: [{
+        data: "no data",
+        pointStart: 1
+    }]
+});
+    
 
 </script>
