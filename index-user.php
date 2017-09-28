@@ -202,16 +202,16 @@ figure:hover .tieude{
 			<div class="row" style="margin-top: 75px">
 				<?php
 					switch ($page) {
-                    case 'clnuoc-begin':  require"Chatluongnuoc/nuoc.php";
+                    case 'clnuoc-begin':  require"chatluongnuoc/nuoc.php";
                         break;
 
-                    case 'clkhongkhi-begin':  require"Chatluongkhongkhi/khongkhi.php";
+                    case 'clkhongkhi-begin':  require"chatluongkhongkhi/khongkhi.php";
                         break;
 
-                    case 'clnuoc':  require"Chatluongnuoc/mapnuoc.php";
+                    case 'clnuoc':  require"chatluongnuoc/mapnuoc.php";
                         break;
 
-                    case 'clkhongkhi':  require"Chatluongkhongkhi/mapkhongkhi.php";
+                    case 'clkhongkhi':  require"chatluongkhongkhi/mapkhongkhi.php";
                         break;
                    
                     default:  require("dulieutrangchu/trangchu.php");;
