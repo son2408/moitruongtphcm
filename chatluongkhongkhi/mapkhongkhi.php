@@ -4,6 +4,7 @@
  {
   $ts = $_GET["ts"];
         $ngay = $_GET["ngay"];
+        $username = $_GET["username"];
  }
    else{
     $ts = "O3";
@@ -12,6 +13,7 @@
       
 
  ?>
+
 
 
 <div id= " container-map-chart" style="margin-top: 20px">

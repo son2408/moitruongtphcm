@@ -1,4 +1,9 @@
-
+<?php
+$username ='';
+  if(isset($_GET['username'])){
+    $username= $_GET['username'];
+  } 
+?>
 
 <div id= " container-map-chart" style="margin-top: 0px">
 

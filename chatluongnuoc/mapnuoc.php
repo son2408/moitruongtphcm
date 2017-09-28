@@ -3,7 +3,8 @@
  if(isset($_GET["ts"]) && isset($_GET["thang"]))
  {
   $ts = $_GET["ts"];
-        $thang = $_GET["thang"];
+  $thang = $_GET["thang"];
+  $username = $_GET["username"];
  }
    else{
     $ts = "WQI";
