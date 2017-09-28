@@ -83,8 +83,7 @@
 $("#luachon").click(function(){
   var  lcts= $('#lc_ts').val();
   var lcngay =$('#lc_ngay').val();
-  window.location.href = "index.php?page=mapkhongkhi&ts="+lcts+"&ngay="+lcngay;
-
+  window.location.href = "index-user.php?page=clkhongkhi&ts="+lcts+"&ngay="+lcngay+"&username="+name;
 });
 
 </script>

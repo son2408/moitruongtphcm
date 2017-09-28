@@ -89,7 +89,7 @@ $username ='';
             $("#luachon").click(function(){
               var  lcts= $('#lc_ts').val();
               var lcthang =$('#lc_thang').val();
-              window.location.href = 'index.php?page=mapnuoc&ts='+lcts+'&thang='+lcthang;
+              window.location.href = 'index-user.php?page=clnuoc&ts='+lcts+'&thang='+lcthang +'&username='+ name;
 
             });
 

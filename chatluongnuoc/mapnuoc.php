@@ -14,7 +14,7 @@
 
  ?>
 
-<div id= " container-map-chart" style="margin-top: 30px">
+<div id= " container-map-chart" style="margin-top:0px">
 
 <div class="col-xs-6" style="height:600PX; " >
 
@@ -490,7 +490,7 @@
 </form>
 </div>
 
-
+</div>
 
 
 
@@ -503,7 +503,7 @@
 $("#luachon").click(function(){
   var  lcts= $('#lc_ts').val();
   var lcthang =$('#lc_thang').val();
-  window.location.href = 'index.php?page=mapnuoc&ts='+lcts+'&thang='+lcthang;
+  window.location.href = 'index-user.php?page=clnuoc&ts='+lcts+'&thang='+lcthang+'&username='+name;
 
 });
 

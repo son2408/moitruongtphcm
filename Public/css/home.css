@@ -431,7 +431,7 @@ input[type=range]::-webkit-slider-thumb {
 .clearfix:after { clear: both; }
 
 .containermenu {
-  margin-top: 30px;
+  margin-top: 75px;
   color: white;
   font-weight: 400;
   font-size: 1em;

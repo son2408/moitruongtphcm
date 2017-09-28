@@ -16,7 +16,7 @@
 
 
 
-<div id= " container-map-chart" style="margin-top: 20px">
+<div id= " container-map-chart" style="margin-top: 0px">
 
 <div class="col-xs-6" style="height:600PX; " >
 
@@ -590,7 +590,7 @@
     
 </form>
 </div>
-
+</div>
 
 <!-- so sanh  -->
 <script type="text/javascript">
@@ -614,7 +614,7 @@
 $("#luachon").click(function(){
   var  lcts= $('#lc_ts').val();
   var lcngay =$('#lc_ngay').val();
-  window.location.href = 'index.php?page=mapkhongkhi&ts='+lcts+'&ngay='+lcngay;
+  window.location.href = 'index-user.php?&page=clkhongkhi&ts='+lcts+'&ngay='+lcngay+ '&username='+name;
 
 });
 
