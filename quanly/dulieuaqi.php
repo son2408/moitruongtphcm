@@ -17,7 +17,7 @@
 					</thead>
 					<tbody>
 						<?php 
-						$conn = pg_connect("host=localhost port=5432 dbname=test user=postgres password=tranthaison");
+						require("../conn.php");
 						$select_data= "SELECT * from dulieufileaqi";
 						$result = pg_query($conn,"$select_data");
 						if ($result == true){

@@ -26,7 +26,7 @@
   if(isset($_GET['username'])){
     $tentaikhoan = $_GET['username'];
   }
-	$conn = pg_connect("host=localhost port=5432 dbname=test user=postgres password=tranthaison");
+	required("../../conn.php");
 	$date = "";
 	if(isset($_POST['ngay_option']) && isset($_POST['thang_option']) &&isset($_POST['nam_option']) ){
 		$ngay = $_POST['ngay_option'];
@@ -163,7 +163,7 @@
 					</thead>
 					<tbody>
 					<?php 
-					$conn = pg_connect("host=localhost port=5432 dbname=test user=postgres password=tranthaison");
+					required("../../conn.php");
 					$select_data= "SELECT * FROM $filename_h where to_char(\"thoigian\", 'YYYY/MM/DD')='$date' and tentram = '$tentram'";
 					$result = pg_query($conn,"$select_data");
 					if ($result == true){
@@ -277,7 +277,7 @@
     	series: [{
     		color : '#d98cd9',
     		data: [<?php
-    		$conn = pg_connect("host=localhost port=5432 dbname=test user=postgres password=tranthaison");
+    		required("../../conn.php");
     		$select_databieudo = "SELECT * FROM $filename_h where to_char(\"thoigian\", 'YYYY/MM/DD')='$date' and tentram = '$tentram'" ; 
     		$result = pg_query($conn,"$select_databieudo");
     		if($result==true){
@@ -308,7 +308,7 @@
     			
     			series: [
     			<?php 
-    			$conn = pg_connect("host=localhost port=5432 dbname=test user=postgres password=tranthaison");
+    			required("../../conn.php");
     			$select_data= "SELECT * FROM $filename_h where to_char(\"thoigian\", 'YYYY/MM/DD')='$date' and tentram = '$tentram'";
     			$result = pg_query($conn,"$select_data");
     			if ($result == true){

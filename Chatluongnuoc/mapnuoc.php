@@ -1200,7 +1200,7 @@ if(!error){
   };
 
 
-xmlhttp.open("GET","Chatluongnuoc/Query_nuoc.php?long="+long2+"&lat="+lat2+"<?php echo '&ts='.$ts.'&thang='.$thang?>",true);
+xmlhttp.open("GET","chatluongnuoc/Query_nuoc.php?long="+long2+"&lat="+lat2+"<?php echo '&ts='.$ts.'&thang='.$thang?>",true);
 xmlhttp.send();
 map.getSource('single-point').setData({
                 "type": "FeatureCollection",

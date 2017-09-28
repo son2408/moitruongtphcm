@@ -2,6 +2,7 @@
 <html>
 <head>
 	<title></title>
+	<title>Bootstrap Exampl</title>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
@@ -16,14 +17,15 @@
 	$matkhau ='';
 	$email = '';
 	$id = '' ;
-	if(isset($_GET['id'])){
+	if(isset($_GET['username'])){
+		$username =$_GET['username'];
 		$tennguoidung = str_replace("-"," ",$_GET['tennguoidung']);
 		$tentaikhoan = $_GET['taikhoan'];
 		$matkhau = $_GET['matkhau'];
 		$email = $_GET['email'];
 		$id  = $_GET['id'];
 	}else{
-	
+		$tennguoidung = 'u';
 	}
  ?>
 	<form action = "thongtinnv-sua-thongbao.php?username=admin&id=<?php echo $id; ?>" method = "POST">
@@ -34,6 +36,7 @@
 						<div class="modal-header">
 							<div class="row">
 								<div class="col-md-12">
+									<a  class="close" href="">&times;</a>
 									<h4 class="modal-title" style="padding-left: 150px">Sửa thông tin tài khoản nhân viên </h4>
 								</div>
 							</div>

@@ -9,7 +9,7 @@ if(isset($_GET['username'])){
 	$tenfile = $_GET['tenfile'];
 	$tenfile_ngay = $_GET['tenfile']."_ngay";
 }
-$conn = pg_connect("host=localhost port=5432 dbname=test user=postgres password=tranthaison");
+required("../../conn.php");
 $delete_data= " DELETE from dulieufileaqi where tentaikhoan='$tentk' and tenfile='$tenfile'";
 $drop_tbl = "DROP TABLE $tenfile";
 $drop_tbl_ngay = "DROP TABLE $tenfile_ngay";

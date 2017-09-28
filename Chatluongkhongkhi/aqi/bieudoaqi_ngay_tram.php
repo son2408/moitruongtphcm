@@ -95,7 +95,7 @@
         series: [{
             color : '#cc00cc',
             data: [<?php
-            $conn = pg_connect("host=localhost port=5432 dbname=test user=postgres password=tranthaison");
+            require("../../conn.php");
             $select_databieudo = "SELECT * FROM $filename_h where to_char(\"thoigian\", 'YYYY/MM/DD')='$date' and tentram = '$tentram'" ; 
             $result = pg_query($conn,"$select_databieudo");
             if($result==true){
@@ -125,7 +125,7 @@
                 },
                 series: [
                 <?php 
-                $conn = pg_connect("host=localhost port=5432 dbname=test user=postgres password=tranthaison");
+                require("../../conn.php");
                 $select_data= "SELECT * FROM $filename_h where to_char(\"thoigian\", 'YYYY/MM/DD')='$date' and tentram = '$tentram'";
                 $result = pg_query($conn,"$select_data");
                 if ($result == true){

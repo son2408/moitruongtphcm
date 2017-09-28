@@ -168,13 +168,13 @@ figure:hover .tieude{
 							<li><a href="javascript:void(0)">Chất Lượng Nước<span class="arrow-down"></span></a>
 								<ul class="dropdown">
 									<li><a href="index-user.php?username=<?php echo $tentaikhoan ?>&page=clnuoc-begin">Giám sát chất lượng nước</a></li>
-									<li><a href="Chatluongnuoc/wqi/dashboard.php?username=<?php echo $tentaikhoan ?>">Tính Toán Chỉ số WQI</a></li>
+									<li><a href="chatluongnuoc/wqi/dashboard.php?username=<?php echo $tentaikhoan ?>">Tính Toán Chỉ số WQI</a></li>
 								</ul>
 							</li>
 							<li><a href="javascript:void(0)" >Chất Lượng Không Khí<span class="arrow-down"></span></a>
 								<ul class="dropdown">
 									<li><a href="index-user.php?username=<?php echo $tentaikhoan ?>&page=clkhongkhi-begin">Giám sát chất lượng không khí</a></li>
-									<li><a href="Chatluongkhongkhi/aqi/dashboard-aqi.php?username=<?php echo $tentaikhoan ?>">Tính Toán Chỉ số AQI</a></li>
+									<li><a href="chatluongkhongkhi/aqi/dashboard-aqi.php?username=<?php echo $tentaikhoan ?>">Tính Toán Chỉ số AQI</a></li>
 								</ul>
 							</li>
 							<li><a href="javascript:void(0)" >Hỗ Trợ<span class="arrow-down"></span></a>

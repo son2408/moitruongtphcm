@@ -1,9 +1,11 @@
+
 <?php 
+require("../../conn.php");
          if(isset($_GET['filename'])){
             $filename_h = $_GET['filename'];
 			$filename_ngay = $_GET['filename'].'_ngay';
 		}
-         $conn = pg_connect("host=localhost port=5432 dbname=test user=postgres password=tranthaison");
+         
  ?>
 <div class="card" style="height: 600px">
 	<div class="header">

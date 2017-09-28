@@ -91,7 +91,7 @@
         series: [{
 
             data: [<?php
-            $conn = pg_connect("host=localhost port=5432 dbname=test user=postgres password=tranthaison");
+            require("../../conn.php");
             $select_databieudo = "SELECT * FROM $filename_ngay WHERE thoigian='$date'" ; 
             $result = pg_query($conn,"$select_databieudo");
             if($result==true){
@@ -125,7 +125,7 @@
                 },
                 series: [
                 <?php 
-                $conn = pg_connect("host=localhost port=5432 dbname=test user=postgres password=tranthaison");
+                require("../../conn.php");
                 $select_data= "SELECT * from $filename_ngay WHERE thoigian='$date'";
                 $result = pg_query($conn,"$select_data");
                 if ($result == true){

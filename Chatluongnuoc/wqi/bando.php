@@ -6,7 +6,7 @@ if(isset($_GET['filename'])){
 	$filename_hinh = $_GET['filename'].'_hinh';
 
 	// echo $filename_thang;
-	$conn = pg_connect("host=localhost port=5432 dbname=test user=postgres password=tranthaison");
+	require("../../conn.php");
 }
 	?>
 	<div class="card" style="padding-right: 10px">
@@ -20,7 +20,7 @@ if(isset($_GET['filename'])){
 							<select class="form-control" id="sel1" name="ngay_option">
 								<option selected value="chonngay">- Ngày -</option>
 								<?php
-								$conn = pg_connect("host=localhost port=5432 dbname=test user=postgres password=tranthaison");
+								require("../../conn.php");
 								$select_ngay= "SELECT distinct extract(day from thoigian)as ngay  from $filename order by ngay asc ";
 								$result_ngay = pg_query($conn,"$select_ngay");
 								if($result_ngay ==true){
@@ -39,7 +39,7 @@ if(isset($_GET['filename'])){
 								<option selected value="chonthang">- Tháng -</option>
 								
 								<?php
-								$conn = pg_connect("host=localhost port=5432 dbname=test user=postgres password=tranthaison");
+								require("../../conn.php");
 								$select_thang= "SELECT distinct extract(month from thoigian)as thang  from $filename order by thang asc ";
 								$result_thang = pg_query($conn,"$select_thang");
 								if($result_thang ==true){
@@ -57,7 +57,7 @@ if(isset($_GET['filename'])){
 							<select class="form-control" id="sel1" name="nam_option">
 								<option selected value="chonnam">- Năm -</option>
 								<?php
-								$conn = pg_connect("host=localhost port=5432 dbname=test user=postgres password=tranthaison");
+								require("../../conn.php");
 								$select_nam= "SELECT distinct extract(year from thoigian)as nam  from $filename order by nam asc ";
 								$result_nam = pg_query($conn,"$select_nam");
 								if($result_nam ==true){

@@ -5,7 +5,7 @@
    <link rel="icon" type="image/png" href="assets/img/favicon.ico">
    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
 
-   <title>Thái Sơn</title>
+   <title>Trang quản lý</title>
 
    <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
    <meta name="viewport" content="width=device-width" />
@@ -173,7 +173,7 @@
                           <?php echo "admin" ; ?> </span></h4>
                       </li>
                         <li>
-                            <a href="index.php" style="font-weight: 600">
+                            <a href="../index.php" style="font-weight: 600">
                                 Thoát
                             </a>
                         </li>
@@ -214,7 +214,7 @@
             <div class="container-fluid">
                 <nav class="pull-left">
                     <ul>
-                            <li><a href="../index-user.php?username=<?php echo "admin" ?>" style=""><span class="glyphicon glyphicon-arrow-left"> </span> Trang chủ</a></li>
+                            <li><a href="../index-quanly1.php?username=<?php echo "admin" ?>" style=""><span class="glyphicon glyphicon-arrow-left"> </span> Trang chủ</a></li>
                     </ul>
                 </nav>
                 <p class="copyright pull-right">

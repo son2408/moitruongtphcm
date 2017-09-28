@@ -1,8 +1,6 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title></title>
-	<title>Bootstrap Example</title>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
@@ -19,7 +17,7 @@
 		if(isset($_GET['filename'])){
            	if($_GET['filename']!=''){
            	$filename= $_GET['filename'];
-           	$conn = pg_connect("host=localhost port=5432 dbname=test user=postgres password=tranthaison");
+           require("../../conn.php");
            
            
 	 ?>

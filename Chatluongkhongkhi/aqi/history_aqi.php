@@ -20,7 +20,7 @@
     $tentaikhoan = $_GET['username'];
   	}
 
-		$conn = pg_connect("host=localhost port=5432 dbname=test user=postgres password=tranthaison"); 
+		require("../../conn.php"); 
 		$name[0]="";
 		if (isset($_POST['btn-import'])) {
 			if (!empty($_FILES["excelfile"]["name"])) {

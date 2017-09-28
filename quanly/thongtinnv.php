@@ -33,7 +33,7 @@
 							$stt = 0;
 							while($row = pg_fetch_array($result)){
 								$stt ++ ;
-								$id = $row['id'];;
+								$id = $row['id'];
 								$tennguoidung = str_replace(" ","-",$row['tennguoidung']);
 								$tentaikhoan = $row['tentaikhoan'];
 								$matkhau = $row['matkhau'];
@@ -48,7 +48,7 @@
 										<a class="btn btn-warning" style="color:white; margin-left: 20px" name="xoa" href="thongtinnv-main.php?action=xoa&username=admin&tentaikhoan=<?php echo $row[1] ?>"> Xóa</a>
 									</td>
 									<td>
-										<a class="btn btn-primary" style="color:white;" name="sua" href="thongtinnv-sua.php?id=<?php echo $id;?>&tennguoidung=<?php echo $tennguoidung;?>&taikhoan=<?php echo $tentaikhoan;?>&matkhau=<?php echo $matkhau;?>&email=<?php echo $mail;?>"> Sửa</a>
+										<a class="btn btn-primary" style="color:white;" name="sua" href="thongtinnv-sua.php?username=admin&id=<?php echo $id;?>&tennguoidung=<?php echo $tennguoidung;?>&taikhoan=<?php echo $tentaikhoan;?>&matkhau=<?php echo $matkhau;?>&email=<?php echo $mail;?>"> Sửa</a>
 									</td>		
 								</tr>
 								<?php

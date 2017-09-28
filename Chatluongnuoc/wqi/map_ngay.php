@@ -16,7 +16,7 @@
 			$tentram = $row['tentram'];
 			$tentram1  = str_replace(" ","-",$row['tentram']);
 			$thoigian = $row['thoigian'];
-			$link = "Chatluongnuoc/wqi/map-bieudo-ngay.php?filename=$filename&tentram=$tentram1&thoigian=$thoigian";
+			// $link = "http://localhost/2017/chatluongnuoc/wqi/map-bieudo-ngay.php?filename=$filename&tentram=$tentram1&thoigian=$thoigian";
 			$mau = ''; 
 			if($wqi >=0 && $wqi <= 25){
 				$mucdo = "Nước ô nhiễm nặng, cần các biện pháp xử lý trong tương lai";
@@ -43,7 +43,7 @@
 					coordinates: [$row[2], $row[3]]
 				},
 				properties: {
-					title: '<div style=\"text-align: center\"><h6><b><a href=\"$link\">Trạm $tentram</a></b></h6></div>',
+					title: '<div style=\"text-align: center\"><h6><b><a href=\"\">Trạm $tentram</a></b></h6></div>',
 					description: '<div style=\"text-align: center\" ><h1>Tọa độ X :$x</h1><h1>Tọa độ Y  :$y</h1><h1>Thời Gian Đo: $thoigian</h1><h4 style=\"background: $mau\"><b>Chỉ số WQI : $wqi</b></h4><h2 style=\"border: 2px solid $mau;border-radius: 5px;\" > <b> Cảnh báo</b>: $mucdo </h2></div>',
 					'marker-color': '$mau',
 					'marker-size': 'large',

@@ -22,7 +22,7 @@
 				</thead>
 				<tbody>
 					<?php 
-					$conn = pg_connect("host=localhost port=5432 dbname=test user=postgres password=tranthaison");
+					require("../../conn.php");
 					$select_data= "SELECT * from $filename";
 					$result = pg_query($conn,"$select_data");
 					if ($result == true){
@@ -68,7 +68,7 @@
 				</thead>
 				<tbody>
 					<?php 
-					$conn = pg_connect("host=localhost port=5432 dbname=test user=postgres password=tranthaison");
+					required("../../conn.php");
 					$select_data= "SELECT * from $filename";
 					$result = pg_query($conn,"$select_data");
 					if ($result == true){

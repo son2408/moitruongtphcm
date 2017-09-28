@@ -20,7 +20,7 @@
 		if(isset($_GET['filename'])){
            	if($_GET['filename']!=''){
            	$filename_h= $_GET['filename'];
-           	$conn = pg_connect("host=localhost port=5432 dbname=test user=postgres password=tranthaison");
+           	require("../../conn.php");
            
            
 	 ?>

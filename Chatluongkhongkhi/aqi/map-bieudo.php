@@ -17,7 +17,7 @@
         $tentram = $_GET['tentram'];
         $tentram1  = str_replace("-"," ",$tentram);
         $thoigian = $_GET['thoigian'];
-        $conn = pg_connect("host=localhost port=5432 dbname=test user=postgres password=tranthaison");
+        required("../../conn.php");
     }
      ?>
      <div class="container" style="margin-top: 70px">
@@ -98,7 +98,7 @@
     series: [{
         colorByPoint: true,
         data: [<?php 
-        $conn = pg_connect("host=localhost port=5432 dbname=test user=postgres password=tranthaison");
+        required("../../conn.php");
         $select = "SELECT *  from $filename_ngay where thoigian='$thoigian' and tentram ='$tentram1'";
         $result = pg_query($conn,"$select");
 

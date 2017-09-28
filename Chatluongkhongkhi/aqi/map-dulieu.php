@@ -20,7 +20,7 @@
                         $thongso_max = $row['thongso_ngay_max'];
                         $tentb = '';
                         $thoigian =$row['thoigian'];
-                        $link = "Chatluongkhongkhi/aqi/map-bieudo.php?filename=$filename_ngay&tentram=$tentram&thoigian=$thoigian";
+                        // $link = "http://localhost/2017/chatluongkhongkhi/aqi/map-bieudo.php?filename=$filename_ngay&tentram=$tentram&thoigian=$thoigian";
                         $mau='';
                         if($aqingay>=0 && $aqingay <=50){
                             $mau = 'icon-tot';
@@ -53,7 +53,7 @@
                                     html: '$aqingay', // add content inside the marker,
                                     iconSize: null // size of icon, use null to set the size in CSS 
                                 },
-                                description:'<div style=\"text-align:center\"><h6><b><a href=\"$link\">Trạm $row[1]</a></b></h6><h1>Tọa độ X :$x</h1><h2>Tọa độ Y  :$y</h2><h4 style=\"background: $mau_tooltip\"><b>Chỉ số AQI : $aqingay</b><br><b>Thông số ô nhiễm nhất : $thongso_max</b></h4><h2 style=\"border: 2px solid $mau_tooltip;border-radius: 5px;\"> <span class=\"glyphicon glyphicon-hand-right\" aria-hidden=\"true\"></span><b> Cảnh báo</b>: Nhóm nhạy cảm nên hạn chế thời gian ở bên ngoài</h2></div>'
+                                description:'<div style=\"text-align:center\"><h6><b><a href=\"\">Trạm $row[1]</a></b></h6><h1>Tọa độ X :$x</h1><h2>Tọa độ Y  :$y</h2><h4 style=\"background: $mau_tooltip\"><b>Chỉ số AQI : $aqingay</b><br><b>Thông số ô nhiễm nhất : $thongso_max</b></h4><h2 style=\"border: 2px solid $mau_tooltip;border-radius: 5px;\"> <span class=\"glyphicon glyphicon-hand-right\" aria-hidden=\"true\"></span><b> Cảnh báo</b>: Nhóm nhạy cảm nên hạn chế thời gian ở bên ngoài</h2></div>'
                             },
                             
                         },";

@@ -4,7 +4,7 @@
             $filename_h = $_GET['filename'];
 			$filename_ngay = $_GET['filename'].'_ngay';
 		}
-         $conn = pg_connect("host=localhost port=5432 dbname=test user=postgres password=tranthaison");
+         require("../../conn.php");
  ?>
  <style type="text/css">
     .map { position:absolute; top:0; bottom:0; width:100%; }
