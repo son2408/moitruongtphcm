@@ -2,9 +2,9 @@
 
  if(isset($_GET["ts"]) && isset($_GET["thang"]))
  {
-  $ts = $_GET["ts"];
-  $thang = $_GET["thang"];
-  $username = $_GET["username"];
+        $ts = $_GET["ts"];
+        $thang = $_GET["thang"];
+        $username = $_GET["username"];
  }
    else{
     $ts = "WQI";
@@ -14,7 +14,7 @@
 
  ?>
 
-<div id= " container-map-chart" style="margin-top:0px">
+<div id= " container-map-chart" style="margin-top: 30px">
 
 <div class="col-xs-6" style="height:600PX; " >
 
@@ -489,8 +489,8 @@
     
 </form>
 </div>
-
 </div>
+
 
 
 
@@ -504,7 +504,7 @@ $("#luachon").click(function(){
   var  lcts= $('#lc_ts').val();
   var lcthang =$('#lc_thang').val();
   var name = "<?php echo $username ?>";
-  window.location.href = 'index-user.php?page=clnuoc&ts='+lcts+'&thang='+lcthang+'&username='+name;
+    window.location.href = 'index-user.php?page=clnuoc&ts='+lcts+'&thang='+lcthang+'&username='+name;
 
 });
 
@@ -627,7 +627,8 @@ setInterval(function()
                     echo 'Giá trị nồng độ '.$ts.' khu vực thành phố Hồ Chí Minh  </br> ngày ';
                   }
                   else{
-                 
+                    echo ('Giá trị '.$ts.' khu vực thành phố Hồ Chí Minh  </br> ngày ');
+                  }
                   
              ?>" + info_ngay +" tháng " + "<?php echo($thang.' năm 2017')?>";
 
@@ -638,8 +639,7 @@ setInterval(function()
         },1000); 
    
         slider.addEventListener('input', function(e) {
-          echo ('Giá trị '.$ts.' khu vực thành phố Hồ Chí Minh  </br> ngày ');
-                  }
+       
         sliderValue.textContent = e.target.value + '%';
     });
 
