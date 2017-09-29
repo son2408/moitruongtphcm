@@ -551,7 +551,7 @@ var Image = new Array ("01","10","20","25","30");
 var   imgCount = 5;
 
 
-var   imgRoot = "Chatluongnuoc/Data/" + "WQI/";
+var   imgRoot = "chatluongnuoc/Data/" + "WQI/";
 var   imgType = "<?php echo('_'.$thang.'.png')  ?>";
 
 

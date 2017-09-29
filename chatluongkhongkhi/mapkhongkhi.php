@@ -676,7 +676,7 @@ var Image = new Array ("00","01","02","03","04","05","06","07","08","09","10",
 var   imgCount = 24;
 
 
-var   imgRoot = "Chatluongkhongkhi/DATA/" + "<?php echo $ts.'/'.$ngay.'_' ?>";
+var   imgRoot = "chatluongkhongkhi/DATA/" + "<?php echo $ts.'/'.$ngay.'_' ?>";
 var   imgType = ".jpg";
 
 
