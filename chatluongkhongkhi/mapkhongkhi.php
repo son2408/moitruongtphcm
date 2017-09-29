@@ -1223,7 +1223,7 @@ else
   };
 
 
-xmlhttp.open("GET","/2017/Database/Query_highchart.php?long="+long+"&lat="+lat+"<?php echo '&ts='.$ts.'&ngay='.$ngay?>",true);
+xmlhttp.open("GET","chatluongkhongkhi/Query_khongkhi.php?long="+long+"&lat="+lat+"<?php echo '&ts='.$ts.'&ngay='.$ngay?>",true);
 xmlhttp.send();
 
 
@@ -1375,7 +1375,7 @@ if(!error){
   };
 
 
-xmlhttp.open("GET","/2017/Database/Query_highchart.php?long="+long2+"&lat="+lat2+"<?php echo '&ts='.$ts.'&ngay='.$ngay?>",true);
+xmlhttp.open("GET","chatluongkhongkhi/Query_khongkhi.php?long="+long2+"&lat="+lat2+"<?php echo '&ts='.$ts.'&ngay='.$ngay?>",true);
 xmlhttp.send();
 map.getSource('single-point').setData({
                 "type": "FeatureCollection",

@@ -1106,7 +1106,7 @@ else
   };
 
 
-xmlhttp.open("GET","/2017/Database/Query_nuoc.php?long="+long+"&lat="+lat+"<?php echo '&ts='.$ts.'&thang='.$thang?>",true);
+xmlhttp.open("GET","chatluongnuoc/Query_nuoc.php?long="+long+"&lat="+lat+"<?php echo '&ts='.$ts.'&thang='.$thang?>",true);
 xmlhttp.send();
 
 
@@ -1258,7 +1258,7 @@ if(!error){
   };
 
 
-xmlhttp.open("GET","/2017/Database/Query_nuoc.php?long="+long2+"&lat="+lat2+"<?php echo '&ts='.$ts.'&thang='.$thang?>",true);
+xmlhttp.open("GET","chatluongnuoc/Query_nuoc.php?long="+long2+"&lat="+lat2+"<?php echo '&ts='.$ts.'&thang='.$thang?>",true);
 xmlhttp.send();
 map.getSource('single-point').setData({
                 "type": "FeatureCollection",
