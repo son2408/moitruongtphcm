@@ -138,7 +138,7 @@ figure:hover .tieude{
 				<div class="">
 					<div class="row">
 						<div class="col-sm-12">
-							<div class="col-md-2 col-md-offset-10" >
+							<div class="col-md-3 col-md-offset-9" >
 								<h4 style="padding-top: 10px"><span class="glyphicon glyphicon-user" aria-hidden="true">
 									<?php echo $tentaikhoan ; ?> <a href="index.php" class="btn btn-default" style="margin-bottom: 5px">Thoát</a> </span></h4>
 							</div>
