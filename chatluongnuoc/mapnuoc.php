@@ -503,7 +503,7 @@
 $("#luachon").click(function(){
   var  lcts= $('#lc_ts').val();
   var lcthang =$('#lc_thang').val();
-  window.location.href = 'index-user.php?page=clnuoc&ts='+lcts+'&thang='+lcthang+'&username='+name;
+  window.location.href = 'index-user.php?page=clnuoc&ts='+lcts+'&thang='+lcthang+'&username='+username;
 
 });
 
@@ -626,8 +626,7 @@ setInterval(function()
                     echo 'Giá trị nồng độ '.$ts.' khu vực thành phố Hồ Chí Minh  </br> ngày ';
                   }
                   else{
-                    echo ('Giá trị '.$ts.' khu vực thành phố Hồ Chí Minh  </br> ngày ');
-                  }
+                 
                   
              ?>" + info_ngay +" tháng " + "<?php echo($thang.' năm 2017')?>";
 
@@ -638,7 +637,8 @@ setInterval(function()
         },1000); 
    
         slider.addEventListener('input', function(e) {
-       
+          echo ('Giá trị '.$ts.' khu vực thành phố Hồ Chí Minh  </br> ngày ');
+                  }
         sliderValue.textContent = e.target.value + '%';
     });
 
