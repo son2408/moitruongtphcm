@@ -16,10 +16,6 @@
 			height: 400px;
 			margin: 10px 0px;
 		}
-		body{
-			background-image: url("../img/back.gif");
-			background-repeat: initial;
-		}
 	</style>
 
 </head>
