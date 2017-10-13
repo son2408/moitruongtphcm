@@ -15,7 +15,7 @@ while($row = pg_fetch_row($ketqua)){
 	array_push ($mang, new Anh ($link, $ngay));
 	
 }
-	echo json_encode($data, JSON_UNESCAPED_SLASHES | JSON_PRETTY_PRINT)
+	echo str_replace('\n','', (json_encode($mang, JSON_UNESCAPED_SLASHES )));
 	
 	class Anh {
 	var $link;
