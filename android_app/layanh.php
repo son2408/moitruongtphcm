@@ -2,15 +2,31 @@
 include("config.inc.php");
 
 
-$sql = "select encode(image,'base64') from anh "; 
+$sql = "select * from anh"; 
 
 
 
 $ketqua= pg_query($link, $sql);
-$arr = pg_fetch_all($ketqua);
+$mang = array();
+while($row = pg_fetch_row($ketqua)){
+	$link = $row[1];
+	$ngay = $row[2];
+	
+	array_push ($mang, new Anh ($link, $ngay));
+	
+}
+	echo json_encode($mang);
+	
+	class Anh {
+	var $link;
+	
+	var $ngay;
+		Function Anh ($l, $n){
+			$this->link = $l;
+			$this->ngay = $n;
+		
+		}	
+	}
 
-	echo str_replace('\n','', (json_encode($arr, JSON_UNESCAPED_SLASHES )));
-
-
-
+	
 ?> 
