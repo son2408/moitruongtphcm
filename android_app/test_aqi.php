@@ -2,6 +2,6 @@
 include("config.inc.php");
 
 $thoigian= pg_query($link, "select thoigian from aqi_hcm_thang3_2011");
-$arr = pg_fetch_all($ketqua);
+$arr = pg_fetch_all($thoigian);
 	echo json_encode($arr);
 ?>
