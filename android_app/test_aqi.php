@@ -1,9 +1,6 @@
 <?php
 include("config.inc.php");
 
-
-$sql = $_POST['sql'];
-
 $thoigian= pg_query($link, "select thoigian from aqi_hcm_thang3_2011");
 $mang =array();
 
