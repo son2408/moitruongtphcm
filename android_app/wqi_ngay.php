@@ -1,6 +1,6 @@
 <?php
 include("config.inc.php");
-$tentram = "Cát Lái";//$_POST['station_name'];
+$tentram = 'Cát Lái';//$_POST['station_name'];
 $month = 9;//$_POST['month'];
 $year = 2014;//$_POST['year'];
 
