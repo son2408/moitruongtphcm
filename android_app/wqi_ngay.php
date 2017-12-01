@@ -1,8 +1,8 @@
 <?php
 include("config.inc.php");
-$tentram = $_POST['station_name'];
-$month = $_POST['month'];
-$year = $_POST['year'];
+$tentram = "Cát Lái";//$_POST['station_name'];
+$month = 9;//$_POST['month'];
+$year = 2014;//$_POST['year'];
 
 $aqi= pg_query($link, "SELECT * from wqi_hcm_2014 where Extract(month from thoigian) = ".$month." and Extract(year from thoigian) = ".$year );
 
