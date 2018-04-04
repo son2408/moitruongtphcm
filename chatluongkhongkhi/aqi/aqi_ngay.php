@@ -68,7 +68,7 @@
 				</thead>
 				<tbody>
 					<?php 
-					required("../../conn.php");
+					require("../../conn.php");
 					$select_data= "SELECT * from $filename";
 					$result = pg_query($conn,"$select_data");
 					if ($result == true){
